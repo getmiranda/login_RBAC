@@ -28,6 +28,9 @@
                                     <a href="{{ route('admin.users.edit', $user->id) }}" class="float-left">
                                         <button type="button" class="btn btn-primary btn-sm">Edit</button>
                                     </a>
+                                    <a href="{{ route('admin.impersonate', $user->id) }}" class="float-left">
+                                        <button type="button" class="btn btn-success btn-sm">Impersonate User</button>
+                                    </a>
                                     <form action="{{ route('admin.users.destroy', $user->id) }}" method="post" class="float-left">
                                         @csrf
                                         @method('DELETE')

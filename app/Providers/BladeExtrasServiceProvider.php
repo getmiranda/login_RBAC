@@ -34,5 +34,12 @@ class BladeExtrasServiceProvider extends ServiceProvider
             }
             return false;
         });
+
+        Blade::if('impersonate', function(){
+            if (session()->get('impersonate')) {
+                return true;
+            }
+            return false;
+        });
     }
 }
